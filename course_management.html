@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .progress-bar-animated {
+            transition: width 1s ease-in-out;
+        }
+        .instructor-card {
+            transition: transform 0.3s ease;
+        }
+        .instructor-card:hover {
+            transform: translateY(-5px);
+        }
+        .module-card {
+            border-left: 4px solid #0d6efd;
+        }
+        .module-card.completed {
+            border-left-color: #198754;
+        }
+        .course-img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Course Management System</h1>
+                    <p class="lead">Track your learning progress and enroll in new courses</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <!-- Current Course Section -->
+        <section class="card mb-5 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 mb-4">Current Course: Web Development Fundamentals</h2>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="card-text mb-4">This comprehensive course covers all the fundamentals of modern web development including HTML, CSS, JavaScript, and responsive design principles. Perfect for beginners looking to start their journey in web development.</p>
+                        
+                        <!-- Progress Bar -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Course Progress</span>
+                                <span>65% Complete</span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Modules List -->
+                        <div class="mb-4">
+                            <h3 class="h5 mb-3">Course Modules</h3>
+                            <div class="list-group">
+                                <div class="list-group-item module-card completed mb-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-1">Module 1: HTML Basics</h4>
+                                        <small class="text-success"><i class="fas fa-check-circle"></i> Completed</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item module-card completed mb-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-1">Module 2: CSS Fundamentals</h4>
+                                        <small class="text-success"><i class="fas fa-check-circle"></i> Completed</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item module-card mb-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-1">Module 3: JavaScript Introduction</h4>
+                                        <small class="text-warning"><i class="fas fa-spinner"></i> In Progress</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item module-card mb-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-1">Module 4: Responsive Design</h4>
+                                        <small class="text-muted">Not Started</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item module-card">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-1">Module 5: Final Project</h4>
+                                        <small class="text-muted">Not Started</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Web Development Course" class="img-fluid course-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Your Instructor Section -->
+        <section class="card mb-5 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 mb-4">Meet Your Instructor</h2>
+                
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor" class="rounded-circle img-thumbnail mb-3" width="200" height="200">
+                        <h3 class="h5">Dr. Michael Johnson</h3>
+                        <p class="text-muted">Senior Web Developer</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-github fa-lg"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-8">
+                        <div class="instructor-card card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title h5">About Dr. Johnson</h4>
+                                <p class="card-text">With over 15 years of experience in web development and education, Dr. Johnson brings a wealth of knowledge to this course. He has worked with major tech companies and has taught thousands of students worldwide.</p>
+                                
+                                <h5 class="mt-4 h6">Qualifications:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i> PhD in Computer Science, MIT</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Former Lead Developer at TechCorp</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Author of "Modern Web Development"</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> 10+ years teaching experience</li>
+                                </ul>
+                                
+                                <h5 class="mt-4 h6">Teaching Philosophy:</h5>
+                                <p class="card-text">"I believe in hands-on learning with real-world projects. My goal is to make complex concepts accessible to everyone, regardless of their background."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Form -->
+        <section class="card shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 mb-4">Enroll in a New Course</h2>
+                
+                <form id="enrollmentForm" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                            <div class="invalid-feedback">
+                                Please provide your full name.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="course" class="form-label">Select Course</label>
+                            <select class="form-select" id="course" required>
+                                <option value="">-- Choose a Course --</option>
+                                <option value="web-dev">Web Development Fundamentals</option>
+                                <option value="python">Python Programming</option>
+                                <option value="data-science">Data Science Essentials</option>
+                                <option value="mobile-dev">Mobile App Development</option>
+                                <option value="ux-design">UX/UI Design</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a course.
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="message" class="form-label">Additional Information (Optional)</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mt-3">
+                            <button class="btn btn-primary px-4 py-2" type="submit">Enroll Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Course Management System. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Form validation
+        (function () {
+            'use strict'
+            
+            var form = document.getElementById('enrollmentForm')
+            
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault()
+                    alert('Thank you for your enrollment! We will contact you shortly.')
+                    form.reset()
+                    form.classList.remove('was-validated')
+                }
+                
+                form.classList.add('was-validated')
+            }, false)
+        })()
+        
+        // Animate progress bar on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = '0';
+            setTimeout(() => {
+                progressBar.style.width = '65%';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
